@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 955b874c2dce3e6409c33f1cd60ef83a, type: 3}
+  m_Name: Pumpkin
+  m_EditorClassIdentifier: 
+  growingStagePrefabs:
+  - {fileID: 1282951659646498, guid: ef45cada154f50b4490e89499cd3aaba, type: 3}
+  - {fileID: 1482622457389426, guid: 01b831e6d82274540a0966e6c3900187, type: 3}
+  - {fileID: 1421407134049668, guid: 160cd81b94a4a9b47a9649e44fe75a15, type: 3}
+  - {fileID: 1029079860058270, guid: fdb809c80f4c35d4fb535ab2501069e7, type: 3}
+  growthDuration:
+    date: 0
+    year: 0
+    hour: 8
+    minutes: 0
+  alivePlantPrefab: {fileID: 2592541532815993541, guid: aa8f95b981461a942a33ce0aed460566,
+    type: 3}
+  aliveTime:
+    date: 0
+    year: 0
+    hour: 2
+    minutes: 15
+  outcome: {fileID: 11400000, guid: fd0b404bee57dc64a8ab5adba94eed7d, type: 2}
+  count: 1
