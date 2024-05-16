@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace InventorySystem.UI
 {
-    public class InventorySlotDisplay : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,IDragHandler,IDropHandler
+    public class InventorySlotDisplay : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IDropHandler, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private Image itemImage;
         [SerializeField] private TMP_Text amountText;
@@ -117,6 +117,16 @@ namespace InventorySystem.UI
         public void RemoveSelection()
         {
             selection.SetActive(false);
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            _inventoryController.OnPointerExit();
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            _inventoryController.OnPointerEnter(InvSlot);
         }
     }
 }

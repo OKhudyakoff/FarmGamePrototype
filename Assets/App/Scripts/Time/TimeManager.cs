@@ -63,12 +63,12 @@ namespace Utilities
     [Serializable]
     public struct DateTime
     {
-        private Season season;
-        private Days day;
+        [SerializeField] private Season season;
         [SerializeField] private int date;
         [SerializeField] private int year;
         [SerializeField] private int hour;
         [SerializeField] private int minutes;
+        private Days day;
         public Season Season => season;
         public Days Day => day;
         public int Date => date;
@@ -207,23 +207,21 @@ namespace Utilities
     [Serializable]
     public enum Season
     {
-        None = 0,
-        Spring = 1,
-        Summer = 2,
-        Autumn = 3,
-        Winter = 4,
+        Весна = 1,
+        Лето = 2,
+        Осень = 3,
+        Зима = 4,
     }
 
     [Serializable]
     public enum Days
     {
-        None = 0,
-        Monday = 1,
-        Tuesday = 2,
-        Wednesday = 3,
-        Thursday = 4,
-        Friday = 5,
-        Saturday = 6,
-        Sunday = 7,
+        Понедельник = 1,
+        Вторник = 2,
+        Среда = 3,
+        Четверг = 4,
+        Пятница = 5,
+        Суббота = 6,
+        Воскресение = 7,
     }
 }

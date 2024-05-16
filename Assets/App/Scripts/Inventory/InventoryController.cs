@@ -1,5 +1,6 @@
 using InventorySystem.Model;
 using InventorySystem.UI;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace InventorySystem
@@ -9,7 +10,6 @@ namespace InventorySystem
         [SerializeField] private bool playerHaveAccess;
         protected int _inventorySize;
         protected InventoryModel _inventory;
-
         public virtual void Init()
         {
             _inventory = new InventoryModel(_inventorySize);
@@ -17,15 +17,21 @@ namespace InventorySystem
 
         public abstract int AddItem(ItemData itemData, int count);
 
+        public void RemoveItem(ItemData itemData, int count)
+        {
+            if (_inventory.GetItemCount(itemData) >= count)
+            {
+                _inventory.RemoveItem(itemData, count);
+            }
+        }
+
         public void OnSlotLeftClicked(InventorySlotDisplay clickedSlotDisplay)
         {
             MouseSlot _mouseSlot = ServiceLocator.Current.Get<Mouse>().MouseSlot;
             if (playerHaveAccess)
             {
-                // Слот не пуст
                 if (!clickedSlotDisplay.InvSlot.IsEmpty)
                 {
-                    //Мышь пуста
                     if (_mouseSlot.IsEmpty)
                     {
                         clickedSlotDisplay.HideUI();
@@ -33,12 +39,10 @@ namespace InventorySystem
                     }
                     else
                     {
-                        // Кликнули на тот же самый слот
                         if (_mouseSlot.Slot == clickedSlotDisplay.InvSlot)
                         {
                             _mouseSlot.ClearSlot();
                         }
-                        // Кликнули на такой же предмет
                         else if (_mouseSlot.Slot.ItemData == clickedSlotDisplay.InvSlot.ItemData)
                         {
                             if (_mouseSlot.Slot.StackSize > clickedSlotDisplay.InvSlot.ItemData.MaxStackSize - clickedSlotDisplay.InvSlot.StackSize)
@@ -92,6 +96,35 @@ namespace InventorySystem
                     _mouseSlot.SplitStack(clickedSlotDisplay.InvSlot);
                 }
             }
+        }
+
+        public void OnPointerEnter(InventorySlot slot)
+        {
+            if(!slot.IsEmpty)
+                ServiceLocator.Current.Get<ToolTip>().Show(slot.ItemData.ItemDescription, slot.ItemData.ItemName, slot.ItemData.ItemSprite);
+        }
+
+        public void OnPointerExit()
+        {
+            ServiceLocator.Current.Get<ToolTip>().Hide();
+        }
+
+        public List<ItemData> ItemsInInventory()
+        {
+            List<ItemData> listToReturn = new List<ItemData>();
+            for (int i = 0; i < _inventory.Slots.Count; i++)
+            {
+                if(!_inventory.Slots[i].IsEmpty && !listToReturn.Contains(_inventory.Slots[i].ItemData))
+                {
+                    listToReturn.Add(_inventory.Slots[i].ItemData);
+                }
+            }
+            return listToReturn;
+        }
+
+        public int ItemCount(ItemData item)
+        {
+            return _inventory.GetItemCount(item);
         }
     }
 }

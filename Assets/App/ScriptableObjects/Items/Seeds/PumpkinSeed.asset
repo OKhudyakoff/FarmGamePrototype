@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d58f564ce0bf144992576cd48dff38d, type: 3}
   m_Name: PumpkinSeed
   m_EditorClassIdentifier: 
-  _itemSprite: {fileID: 21300000, guid: 660068e8e382e7b4c936c22242dcec95, type: 3}
-  _itemName: Pumpkin Seed
+  _itemSprite: {fileID: 21300000, guid: c1d49f2c27ea59044be23826c6214291, type: 3}
+  _itemName: "\u0421\u0435\u043C\u0435\u043D\u0430 \u0442\u044B\u043A\u0432\u044B"
+  _itemDescription: "\u0421\u043E\u0437\u0440\u0435\u0432\u0430\u044E\u0442 \u0432
+    \u0442\u0435\u0447\u0435\u043D\u0438\u0438 <color=#FF0000> 6 </color> \u0447\u0430\u0441\u043E\u0432"
   _maxStackSize: 5
+  _itemPrefab: {fileID: 0}
   _plantData: {fileID: 11400000, guid: 07bb6d1f1aaa95745821da32b4d2c80a, type: 2}

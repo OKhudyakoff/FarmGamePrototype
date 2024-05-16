@@ -28,4 +28,4 @@ MonoBehaviour:
     hour: 0
     minutes: 0
   outcome: {fileID: 11400000, guid: 0576e9d7f8becd341bd4d0d48e48b6ab, type: 2}
-  count: 1
+  count: 3

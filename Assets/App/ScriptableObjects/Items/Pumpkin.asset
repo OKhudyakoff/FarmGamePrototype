@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5230f9959a4ea2a489b06ca0321c75e8, type: 3}
   m_Name: Pumpkin
   m_EditorClassIdentifier: 
-  _itemSprite: {fileID: 21300000, guid: c95149ea2e7240849986e55b65a6c91f, type: 3}
-  _itemName: Chicken
+  _itemSprite: {fileID: 21300000, guid: a67c6789c9c5b5944a6cc7a14c378233, type: 3}
+  _itemName: "\u0422\u044B\u043A\u0432\u0430"
+  _itemDescription: "\u0411\u043E\u043B\u044C\u0448\u0430\u044F \u0438 \u043A\u0440\u0443\u0433\u043B\u0430\u044F"
   _maxStackSize: 3
+  _itemPrefab: {fileID: 0}

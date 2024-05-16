@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282443e72554a9946b25832b79523cb6, type: 3}
   m_Name: WateringCan
   m_EditorClassIdentifier: 
-  _itemSprite: {fileID: 21300000, guid: 4d4ff22eb07fe5c46896549896c619e2, type: 3}
-  _itemName: WateringCan
+  _itemSprite: {fileID: 21300000, guid: 5cbb9b8512fad65408a9f44ac3483049, type: 3}
+  _itemName: "\u041B\u0435\u0439\u043A\u0430"
+  _itemDescription: "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0441\u044F
+    \u0434\u043B\u044F \u043F\u043E\u043B\u0438\u0432\u0430 \u0433\u0440\u044F\u0434\u043E\u043A"
   _maxStackSize: 1
   _itemPrefab: {fileID: 914582975124368444, guid: 3119a29b562d3b94e918afd2e56a3390,
     type: 3}

@@ -7,7 +7,7 @@ public class Mouse : MonoBehaviour,IService
     public MouseSlot MouseSlot => _mouseSlot;
     public bool IsCursorLocked { get; private set; }
 
-    private void Awake()
+    private void Start()
     {
         LockCursor();
     }
@@ -17,6 +17,7 @@ public class Mouse : MonoBehaviour,IService
         IsCursorLocked = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        ServiceLocator.Current.Get<ToolTip>().Hide();
     }
 
     public void UnlockCursor()

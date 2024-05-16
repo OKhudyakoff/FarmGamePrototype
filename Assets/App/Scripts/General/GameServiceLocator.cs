@@ -9,7 +9,7 @@ public class GameServiceLocator : MonoBehaviour
     [SerializeField] private TimeManager _timeManager;
     [SerializeField] private Mouse _mouse;
     [SerializeField] private PlayerInventory _inventoryController;
-    //[SerializeField] private BulletObjectPool _bulletObjectPool;
+    [SerializeField] private ToolTip _toolTip;
 
     private void Awake()
     {
@@ -20,18 +20,19 @@ public class GameServiceLocator : MonoBehaviour
 
     private void RegisterServices()
     {
+        ServiceLocator.Current.Register<InputHandler>(_inputHandler); // General
+
         ServiceLocator.Current.Register<PlayerController>(_playerController);
-        ServiceLocator.Current.Register<InputHandler>(_inputHandler);
         ServiceLocator.Current.Register<TimeManager>(_timeManager);
         ServiceLocator.Current.Register<Mouse>(_mouse);
         ServiceLocator.Current.Register<PlayerInventory>(_inventoryController);
-
-        //ServiceLocator.Current.Register<BulletObjectPool>(_bulletObjectPool);
+        ServiceLocator.Current.Register<ToolTip>(_toolTip);
     }
 
     private void InitServices()
     {
         _inventoryController.Init();
         _timeManager.Init();
+        _toolTip.Init();
     }
 }

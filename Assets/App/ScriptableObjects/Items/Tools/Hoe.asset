@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282443e72554a9946b25832b79523cb6, type: 3}
   m_Name: Hoe
   m_EditorClassIdentifier: 
-  _itemSprite: {fileID: 21300000, guid: 244423de37b327848820a160eaf7ea33, type: 3}
-  _itemName: Hoe
+  _itemSprite: {fileID: 21300000, guid: f9d687f9afe852c499419fd1a8d8f886, type: 3}
+  _itemName: "\u041C\u043E\u0442\u044B\u0433\u0430"
+  _itemDescription: "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0441\u044F
+    \u0434\u043B\u044F \u0432\u0441\u043F\u0430\u0445\u0438\u0432\u0430\u043D\u0438\u044F
+    \u0433\u0440\u044F\u0434\u043E\u043A"
   _maxStackSize: 1
   _itemPrefab: {fileID: 9154951431184245731, guid: 0494abed9c5153c438f1bab5e3b941da,
     type: 3}

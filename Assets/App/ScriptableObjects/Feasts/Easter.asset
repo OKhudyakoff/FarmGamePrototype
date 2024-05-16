@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14971658259c2b5429c18032b3ad1dd6, type: 3}
+  m_Name: Easter
+  m_EditorClassIdentifier: 
+  _feastName: "\u041F\u0430\u0441\u0445\u0430"
+  _feastDate:
+    season: 1
+    date: 15
+    year: 0
+    hour: 0
+    minutes: 0
+  _feastIcon: {fileID: 21300000, guid: fd289540a3b913349960de4a21856c02, type: 3}
