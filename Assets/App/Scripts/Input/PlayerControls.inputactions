@@ -51,46 +51,10 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "TriggerInventory",
-                    "type": "Button",
-                    "id": "33e97a76-544e-4898-97c3-9fcd004c5aee",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Interaction",
                     "type": "Button",
                     "id": "c2cf4c25-94f8-4c13-aa32-3b03e5a0fb1e",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Scroll",
-                    "type": "PassThrough",
-                    "id": "26101a11-d3bc-42e5-bf25-a8960392b6f2",
-                    "expectedControlType": "Axis",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Pause",
-                    "type": "Button",
-                    "id": "b622bd22-23b6-41f7-8ca2-d375f0189cc5",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "ItemInteraction",
-                    "type": "Button",
-                    "id": "6323b1d4-d5ac-4e6a-b90b-43806218d2b9",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -198,17 +162,6 @@
                 },
                 {
                     "name": "",
-                    "id": "e0d3474b-4046-4ddb-8f90-0a53d5505916",
-                    "path": "<Keyboard>/tab",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TriggerInventory",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "7941bbdd-0dcf-4bc4-964b-5601ddb3a060",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -217,21 +170,85 @@
                     "action": "Interaction",
                     "isComposite": false,
                     "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "fc3d1650-8065-4c60-a509-b744c47c6542",
+            "actions": [
+                {
+                    "name": "Split",
+                    "type": "Button",
+                    "id": "30fd9b78-16e7-4199-88a0-4cfbdfd7bbc4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
+                    "name": "ItemInteraction",
+                    "type": "Button",
+                    "id": "fda6aaa9-562f-4d7b-913b-40a6c46d7ebb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "f8741149-61b6-4760-9259-bcf21d51dfcb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Scroll",
+                    "type": "PassThrough",
+                    "id": "cc0ad502-d970-43b7-9fad-d45b4c54f233",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TriggerInventory",
+                    "type": "Button",
+                    "id": "b4bf30d0-3b62-4d09-8a68-f2f076f5dbd1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
                     "name": "",
-                    "id": "ebc4ebcc-191d-4bf8-abb5-486d09d0a416",
-                    "path": "<Mouse>/scroll/y",
+                    "id": "8b793725-3928-4999-b169-4a39673b3d50",
+                    "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Scroll",
+                    "action": "Split",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "870181b6-a9a6-430d-9049-642017599b3e",
+                    "id": "c8d67496-5e2d-4161-a74d-dfa84fe2770c",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ItemInteraction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "95588be7-ccc9-4792-9fa7-97fe55a955ad",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
@@ -242,12 +259,23 @@
                 },
                 {
                     "name": "",
-                    "id": "e10a908a-b679-400b-9e0e-9ed45b583035",
-                    "path": "<Mouse>/rightButton",
+                    "id": "e77bf0eb-5c70-4c8c-8887-da3591a00a6a",
+                    "path": "<Mouse>/scroll/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ItemInteraction",
+                    "action": "Scroll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "03e4f983-7f1f-46a8-9ce4-92efa19c66a8",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TriggerInventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

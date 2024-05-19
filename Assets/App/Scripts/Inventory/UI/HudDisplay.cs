@@ -21,13 +21,5 @@ namespace InventorySystem.UI
                 _slots[i].Init(_model.Slots[i], _controller);
             }
         }
-
-        public void UpdateSlotDisplays()
-        {
-            foreach (var slot in _slots)
-            {
-                slot.UpdateSlot();
-            }
-        }
     }
 }

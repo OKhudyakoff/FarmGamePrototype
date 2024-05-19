@@ -18,7 +18,7 @@ public class PlayerHotbar : InventoryController
     public override void Init()
     {
         _inventorySize = _hudDisplay.Slots.Count;
-        _inventory = new InventoryModel(_inventorySize);
+        base.Init();
         _hudDisplay.Init(this, _inventory);
     }
 
@@ -31,6 +31,7 @@ public class PlayerHotbar : InventoryController
     {
         ServiceLocator.Current.Get<InputHandler>().OnScrollTriggered += ChangeCurrentSelectedSlot;
         ServiceLocator.Current.Get<InputHandler>().OnItemInteractTriggered += UseSelectedItem;
+        SetOtherInventory(ServiceLocator.Current.Get<PlayerInventory>());
         _currentSelectedSlotId = 0;
         ChangeCurrentSelectedSlot(0);
     }
@@ -48,6 +49,7 @@ public class PlayerHotbar : InventoryController
 
     private void ChangeCurrentSelectedSlot(float value)
     {
+        if (!ServiceLocator.Current.Get<Mouse>().IsCursorLocked) return;
         if (_hudDisplay.Slots.Count > 0)
         {
             _currentSelectedSlotDisplay.RemoveSelection();

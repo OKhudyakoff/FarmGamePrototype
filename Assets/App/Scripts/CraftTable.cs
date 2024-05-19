@@ -1,39 +1,44 @@
 using InteractionSystem;
+using InventorySystem;
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Outline))]
 public class CraftTable : MonoBehaviour, IInteraction
 {
-    [SerializeField] private Canvas _craftCanvas;
+    [SerializeField] private BaseWindow _craftCanvas;
+    [SerializeField] private bool isOpened = false;
+    private CraftSystem _craftSystem;
     private Outline _outline;
-    private bool isOpened = false;
 
     private void Start()
     {
         _outline = GetComponent<Outline>();
+        _craftSystem = GetComponent<CraftSystem>();
+
         DeselectObject();
         isOpened = false;
-        _craftCanvas.gameObject.SetActive(isOpened);
     }
 
     public void Interact(Interactor interactor)
     {
+        isOpened = _craftCanvas.gameObject.activeSelf;
         isOpened = !isOpened;
-        ShowDisplay();
+        UpdateState();
     }
 
-    private void ShowDisplay()
+    private void UpdateState()
     {
-        if(isOpened)
+        if (isOpened)
         {
-            _craftCanvas.gameObject.SetActive(false);
-            Mouse.LockCursor();
+            _craftCanvas.Open();
         }
         else
         {
-            _craftCanvas.gameObject.SetActive(true);
-            Mouse.UnlockCursor();
+            _craftCanvas.Close();
         }
+
+        _craftSystem.UpdateConnectionWithPlayerInventory(isOpened);
     }
 
     public void SelectObject()
@@ -43,6 +48,8 @@ public class CraftTable : MonoBehaviour, IInteraction
 
     public void DeselectObject()
     {
+        isOpened = false;
+        UpdateState();
         _outline.enabled = false;
     }
 }

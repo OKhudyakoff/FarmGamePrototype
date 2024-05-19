@@ -11,28 +11,27 @@ namespace InventorySystem.UI
 
         private List<InventorySlotDisplay> _slots = new List<InventorySlotDisplay>();
         private InventoryController _controller;
-        private InventoryModel _inventory;
 
-        public void Init(InventoryController controller, InventoryModel inventory)
+        public void Init(InventoryController controller)
         {
             _controller = controller;
-            _inventory = inventory;
+            InventoryModel _inventory = _controller.GetInventory();
 
             int _slotsCount = _slots.Count;
 
-            if (_slotsCount < inventory.Slots.Count)
+            if (_slotsCount < _inventory.Slots.Count)
             {
-                for (int i = 0; i < inventory.Slots.Count - _slotsCount; i++)
+                for (int i = 0; i < _inventory.Slots.Count - _slotsCount; i++)
                 {
                     InventorySlotDisplay slotDisplay = Instantiate(_slotPrefab, _slotsContainer);
                     _slots.Add(slotDisplay);
                 }
             }
-            else if(_slotsCount > inventory.Slots.Count)
+            else if (_slotsCount > _inventory.Slots.Count)
             {
-                for(int i = 0; i < _slots.Count; i++)
+                for (int i = 0; i < _slots.Count; i++)
                 {
-                    if(i > _inventory.Slots.Count)
+                    if (i > _inventory.Slots.Count)
                     {
                         _slots[i].gameObject.SetActive(false);
                     }

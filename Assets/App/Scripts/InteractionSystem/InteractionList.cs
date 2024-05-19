@@ -7,7 +7,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Outline))]
 public class InteractionList : MonoBehaviour, IInteraction
 {
-    [SerializeField] private GameObject _interactionPanel;
+    [SerializeField] private BaseWindow _interactionPanel;
     [SerializeField] private Transform _buttonHolderl;
     [SerializeField] private InterationUIButton _interactionButtonPrefab;
     [SerializeField] private List<ActionObject> _actions = new List<ActionObject>();
@@ -48,8 +48,7 @@ public class InteractionList : MonoBehaviour, IInteraction
     {
         _outline.enabled = false;
         _isInteractionStarted = false;
-        _interactionPanel.SetActive(false);
-        Mouse.LockCursor();
+        _interactionPanel.Close();
     }
 
     public void Interact(Interactor interactor)
@@ -57,13 +56,12 @@ public class InteractionList : MonoBehaviour, IInteraction
         if(!_isInteractionStarted)
         {
             _isInteractionStarted = true;
-            _interactionPanel.SetActive(true);
-            Mouse.UnlockCursor();
+            _interactionPanel.Open();
         }
         else
         {
             _isInteractionStarted = false;
-            _interactionPanel.SetActive(false);
+            _interactionPanel.Close();
             Mouse.LockCursor();
         }
     }

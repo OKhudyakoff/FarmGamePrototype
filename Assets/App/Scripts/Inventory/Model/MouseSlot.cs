@@ -13,27 +13,21 @@ namespace InventorySystem.UI
 
         private void Start()
         {
+            Slot = new InventorySlot();
+            Slot.OnSlotUpdated += UpdateDisplay;
             UpdateDisplay();
         }
 
         public void Set(InventorySlot slot)
         {
-            if(Slot != null)
-            {
-                Slot.OnSlotUpdated -= UpdateDisplay;
-            }
-            Slot = slot;
-            Slot.IsLockedToDisplay = true;
-            Slot.OnSlotUpdated += UpdateDisplay;
-            Slot.OnSlotUpdated?.Invoke();
+            Slot.SetItem(slot.ItemData, slot.StackSize);
+            slot.ClearSlot();
         }
 
         public void SplitStack(InventorySlot otherSlot)
         {
             if(otherSlot.StackSize - otherSlot.StackSize/2 > 0)
             {
-                Slot = new InventorySlot();
-                Slot.OnSlotUpdated += UpdateDisplay;
                 Slot.SetItem(otherSlot.ItemData, otherSlot.StackSize / 2);
                 otherSlot.DecreaseQuantity(otherSlot.StackSize / 2);
             }
@@ -54,7 +48,8 @@ namespace InventorySystem.UI
             }
             else
             {
-                ClearSlot();
+                itemImage.gameObject.SetActive(false);
+                amountText.gameObject.SetActive(false);
             }
         }
 
@@ -62,13 +57,8 @@ namespace InventorySystem.UI
         {
             if (Slot != null)
             {
-                Slot.IsLockedToDisplay = false;
-                Slot.OnSlotUpdated -= UpdateDisplay;
-                Slot.OnSlotUpdated?.Invoke();
-                Slot = null;
+                Slot.ClearSlot();
             }
-            itemImage.gameObject.SetActive(false);
-            amountText.gameObject.SetActive(false);
         }
 
         public bool IsEmpty => Slot == null || Slot.IsEmpty;

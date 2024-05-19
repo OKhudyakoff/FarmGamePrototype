@@ -74,46 +74,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""TriggerInventory"",
-                    ""type"": ""Button"",
-                    ""id"": ""33e97a76-544e-4898-97c3-9fcd004c5aee"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Interaction"",
                     ""type"": ""Button"",
                     ""id"": ""c2cf4c25-94f8-4c13-aa32-3b03e5a0fb1e"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Scroll"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""26101a11-d3bc-42e5-bf25-a8960392b6f2"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Pause"",
-                    ""type"": ""Button"",
-                    ""id"": ""b622bd22-23b6-41f7-8ca2-d375f0189cc5"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""ItemInteraction"",
-                    ""type"": ""Button"",
-                    ""id"": ""6323b1d4-d5ac-4e6a-b90b-43806218d2b9"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -221,17 +185,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""e0d3474b-4046-4ddb-8f90-0a53d5505916"",
-                    ""path"": ""<Keyboard>/tab"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""TriggerInventory"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""7941bbdd-0dcf-4bc4-964b-5601ddb3a060"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
@@ -240,21 +193,85 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Interaction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""UI"",
+            ""id"": ""fc3d1650-8065-4c60-a509-b744c47c6542"",
+            ""actions"": [
+                {
+                    ""name"": ""Split"",
+                    ""type"": ""Button"",
+                    ""id"": ""30fd9b78-16e7-4199-88a0-4cfbdfd7bbc4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""ItemInteraction"",
+                    ""type"": ""Button"",
+                    ""id"": ""fda6aaa9-562f-4d7b-913b-40a6c46d7ebb"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""f8741149-61b6-4760-9259-bcf21d51dfcb"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Scroll"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""cc0ad502-d970-43b7-9fad-d45b4c54f233"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TriggerInventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""b4bf30d0-3b62-4d09-8a68-f2f076f5dbd1"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
                     ""name"": """",
-                    ""id"": ""ebc4ebcc-191d-4bf8-abb5-486d09d0a416"",
-                    ""path"": ""<Mouse>/scroll/y"",
+                    ""id"": ""8b793725-3928-4999-b169-4a39673b3d50"",
+                    ""path"": ""<Keyboard>/leftShift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Scroll"",
+                    ""action"": ""Split"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""870181b6-a9a6-430d-9049-642017599b3e"",
+                    ""id"": ""c8d67496-5e2d-4161-a74d-dfa84fe2770c"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ItemInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""95588be7-ccc9-4792-9fa7-97fe55a955ad"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -265,12 +282,23 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""e10a908a-b679-400b-9e0e-9ed45b583035"",
-                    ""path"": ""<Mouse>/rightButton"",
+                    ""id"": ""e77bf0eb-5c70-4c8c-8887-da3591a00a6a"",
+                    ""path"": ""<Mouse>/scroll/y"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""ItemInteraction"",
+                    ""action"": ""Scroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""03e4f983-7f1f-46a8-9ce4-92efa19c66a8"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TriggerInventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -286,16 +314,20 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Movement_Jump = m_Movement.FindAction("Jump", throwIfNotFound: true);
         m_Movement_Run = m_Movement.FindAction("Run", throwIfNotFound: true);
         m_Movement_MousePosition = m_Movement.FindAction("MousePosition", throwIfNotFound: true);
-        m_Movement_TriggerInventory = m_Movement.FindAction("TriggerInventory", throwIfNotFound: true);
         m_Movement_Interaction = m_Movement.FindAction("Interaction", throwIfNotFound: true);
-        m_Movement_Scroll = m_Movement.FindAction("Scroll", throwIfNotFound: true);
-        m_Movement_Pause = m_Movement.FindAction("Pause", throwIfNotFound: true);
-        m_Movement_ItemInteraction = m_Movement.FindAction("ItemInteraction", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_Split = m_UI.FindAction("Split", throwIfNotFound: true);
+        m_UI_ItemInteraction = m_UI.FindAction("ItemInteraction", throwIfNotFound: true);
+        m_UI_Pause = m_UI.FindAction("Pause", throwIfNotFound: true);
+        m_UI_Scroll = m_UI.FindAction("Scroll", throwIfNotFound: true);
+        m_UI_TriggerInventory = m_UI.FindAction("TriggerInventory", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
     {
         Debug.Assert(!m_Movement.enabled, "This will cause a leak and performance issues, PlayerControls.Movement.Disable() has not been called.");
+        Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, PlayerControls.UI.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -362,11 +394,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Movement_Jump;
     private readonly InputAction m_Movement_Run;
     private readonly InputAction m_Movement_MousePosition;
-    private readonly InputAction m_Movement_TriggerInventory;
     private readonly InputAction m_Movement_Interaction;
-    private readonly InputAction m_Movement_Scroll;
-    private readonly InputAction m_Movement_Pause;
-    private readonly InputAction m_Movement_ItemInteraction;
     public struct MovementActions
     {
         private @PlayerControls m_Wrapper;
@@ -376,11 +404,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Movement_Jump;
         public InputAction @Run => m_Wrapper.m_Movement_Run;
         public InputAction @MousePosition => m_Wrapper.m_Movement_MousePosition;
-        public InputAction @TriggerInventory => m_Wrapper.m_Movement_TriggerInventory;
         public InputAction @Interaction => m_Wrapper.m_Movement_Interaction;
-        public InputAction @Scroll => m_Wrapper.m_Movement_Scroll;
-        public InputAction @Pause => m_Wrapper.m_Movement_Pause;
-        public InputAction @ItemInteraction => m_Wrapper.m_Movement_ItemInteraction;
         public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -405,21 +429,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @MousePosition.started += instance.OnMousePosition;
             @MousePosition.performed += instance.OnMousePosition;
             @MousePosition.canceled += instance.OnMousePosition;
-            @TriggerInventory.started += instance.OnTriggerInventory;
-            @TriggerInventory.performed += instance.OnTriggerInventory;
-            @TriggerInventory.canceled += instance.OnTriggerInventory;
             @Interaction.started += instance.OnInteraction;
             @Interaction.performed += instance.OnInteraction;
             @Interaction.canceled += instance.OnInteraction;
-            @Scroll.started += instance.OnScroll;
-            @Scroll.performed += instance.OnScroll;
-            @Scroll.canceled += instance.OnScroll;
-            @Pause.started += instance.OnPause;
-            @Pause.performed += instance.OnPause;
-            @Pause.canceled += instance.OnPause;
-            @ItemInteraction.started += instance.OnItemInteraction;
-            @ItemInteraction.performed += instance.OnItemInteraction;
-            @ItemInteraction.canceled += instance.OnItemInteraction;
         }
 
         private void UnregisterCallbacks(IMovementActions instance)
@@ -439,21 +451,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @MousePosition.started -= instance.OnMousePosition;
             @MousePosition.performed -= instance.OnMousePosition;
             @MousePosition.canceled -= instance.OnMousePosition;
-            @TriggerInventory.started -= instance.OnTriggerInventory;
-            @TriggerInventory.performed -= instance.OnTriggerInventory;
-            @TriggerInventory.canceled -= instance.OnTriggerInventory;
             @Interaction.started -= instance.OnInteraction;
             @Interaction.performed -= instance.OnInteraction;
             @Interaction.canceled -= instance.OnInteraction;
-            @Scroll.started -= instance.OnScroll;
-            @Scroll.performed -= instance.OnScroll;
-            @Scroll.canceled -= instance.OnScroll;
-            @Pause.started -= instance.OnPause;
-            @Pause.performed -= instance.OnPause;
-            @Pause.canceled -= instance.OnPause;
-            @ItemInteraction.started -= instance.OnItemInteraction;
-            @ItemInteraction.performed -= instance.OnItemInteraction;
-            @ItemInteraction.canceled -= instance.OnItemInteraction;
         }
 
         public void RemoveCallbacks(IMovementActions instance)
@@ -471,6 +471,84 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         }
     }
     public MovementActions @Movement => new MovementActions(this);
+
+    // UI
+    private readonly InputActionMap m_UI;
+    private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
+    private readonly InputAction m_UI_Split;
+    private readonly InputAction m_UI_ItemInteraction;
+    private readonly InputAction m_UI_Pause;
+    private readonly InputAction m_UI_Scroll;
+    private readonly InputAction m_UI_TriggerInventory;
+    public struct UIActions
+    {
+        private @PlayerControls m_Wrapper;
+        public UIActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Split => m_Wrapper.m_UI_Split;
+        public InputAction @ItemInteraction => m_Wrapper.m_UI_ItemInteraction;
+        public InputAction @Pause => m_Wrapper.m_UI_Pause;
+        public InputAction @Scroll => m_Wrapper.m_UI_Scroll;
+        public InputAction @TriggerInventory => m_Wrapper.m_UI_TriggerInventory;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void AddCallbacks(IUIActions instance)
+        {
+            if (instance == null || m_Wrapper.m_UIActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_UIActionsCallbackInterfaces.Add(instance);
+            @Split.started += instance.OnSplit;
+            @Split.performed += instance.OnSplit;
+            @Split.canceled += instance.OnSplit;
+            @ItemInteraction.started += instance.OnItemInteraction;
+            @ItemInteraction.performed += instance.OnItemInteraction;
+            @ItemInteraction.canceled += instance.OnItemInteraction;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
+            @Scroll.started += instance.OnScroll;
+            @Scroll.performed += instance.OnScroll;
+            @Scroll.canceled += instance.OnScroll;
+            @TriggerInventory.started += instance.OnTriggerInventory;
+            @TriggerInventory.performed += instance.OnTriggerInventory;
+            @TriggerInventory.canceled += instance.OnTriggerInventory;
+        }
+
+        private void UnregisterCallbacks(IUIActions instance)
+        {
+            @Split.started -= instance.OnSplit;
+            @Split.performed -= instance.OnSplit;
+            @Split.canceled -= instance.OnSplit;
+            @ItemInteraction.started -= instance.OnItemInteraction;
+            @ItemInteraction.performed -= instance.OnItemInteraction;
+            @ItemInteraction.canceled -= instance.OnItemInteraction;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
+            @Scroll.started -= instance.OnScroll;
+            @Scroll.performed -= instance.OnScroll;
+            @Scroll.canceled -= instance.OnScroll;
+            @TriggerInventory.started -= instance.OnTriggerInventory;
+            @TriggerInventory.performed -= instance.OnTriggerInventory;
+            @TriggerInventory.canceled -= instance.OnTriggerInventory;
+        }
+
+        public void RemoveCallbacks(IUIActions instance)
+        {
+            if (m_Wrapper.m_UIActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IUIActions instance)
+        {
+            foreach (var item in m_Wrapper.m_UIActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_UIActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public UIActions @UI => new UIActions(this);
     public interface IMovementActions
     {
         void OnMouseLook(InputAction.CallbackContext context);
@@ -478,10 +556,14 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
-        void OnTriggerInventory(InputAction.CallbackContext context);
         void OnInteraction(InputAction.CallbackContext context);
-        void OnScroll(InputAction.CallbackContext context);
-        void OnPause(InputAction.CallbackContext context);
+    }
+    public interface IUIActions
+    {
+        void OnSplit(InputAction.CallbackContext context);
         void OnItemInteraction(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnScroll(InputAction.CallbackContext context);
+        void OnTriggerInventory(InputAction.CallbackContext context);
     }
 }

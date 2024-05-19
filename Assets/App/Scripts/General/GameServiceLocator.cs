@@ -10,6 +10,7 @@ public class GameServiceLocator : MonoBehaviour
     [SerializeField] private Mouse _mouse;
     [SerializeField] private PlayerInventory _inventoryController;
     [SerializeField] private ToolTip _toolTip;
+    private WindowsManager _windowsManager;
 
     private void Awake()
     {
@@ -27,11 +28,14 @@ public class GameServiceLocator : MonoBehaviour
         ServiceLocator.Current.Register<Mouse>(_mouse);
         ServiceLocator.Current.Register<PlayerInventory>(_inventoryController);
         ServiceLocator.Current.Register<ToolTip>(_toolTip);
+
+        _windowsManager = new WindowsManager();
+        ServiceLocator.Current.Register(_windowsManager);
     }
 
     private void InitServices()
     {
-        _inventoryController.Init();
+        //_inventoryController.Init();
         _timeManager.Init();
         _toolTip.Init();
     }

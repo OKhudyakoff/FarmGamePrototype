@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 
 namespace InventorySystem.Model
 {
@@ -8,30 +9,34 @@ namespace InventorySystem.Model
         public ItemData ItemData { get; private set; }
         public int StackSize { get; private set; }
         public Action OnSlotUpdated;
-        public bool IsLockedToDisplay;
 
         public InventorySlot()
         {
             ItemData = null;
             StackSize = 0;
-            IsLockedToDisplay = false;
         }
 
-        public void SetItem(ItemData itemData, int count = 1, bool isLockedToDisplay = false)
+        public void SetItem(ItemData itemData, int count = 1)
         {
-            this.ItemData = itemData;
-            StackSize = count;
-            IsLockedToDisplay = isLockedToDisplay;
-            OnSlotUpdated?.Invoke();
+            if(count > 0)
+            {
+                this.ItemData = itemData;
+                StackSize = count;
+                OnSlotUpdated?.Invoke();
+            }
+            else
+            {
+                ClearSlot();
+            }
         }
 
-        public void IncreaseQuantity(int countToAdd)
+        public void IncreaseQuantity(int countToAdd = 1)
         {
             StackSize += countToAdd;
             OnSlotUpdated?.Invoke();
         }
 
-        public void DecreaseQuantity(int countToRemove)
+        public void DecreaseQuantity(int countToRemove = 1)
         {
             StackSize -= countToRemove;
             if (StackSize <= 0)
@@ -46,7 +51,6 @@ namespace InventorySystem.Model
         {
             ItemData = null;
             StackSize = 0;
-            IsLockedToDisplay = false;
             OnSlotUpdated?.Invoke();
         }
 

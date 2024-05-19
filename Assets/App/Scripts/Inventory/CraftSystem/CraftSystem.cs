@@ -1,7 +1,6 @@
 using InventorySystem;
 using InventorySystem.Model;
 using InventorySystem.UI;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,41 +11,40 @@ public class CraftSystem : InventoryController
     [SerializeField] private InventoryDisplay _playerInventoryDisplay;
     [SerializeField] private RecipeInfo recipeInfo;
 
-
     private void Start()
     {
-        PlayerInventory pInventory = ServiceLocator.Current.Get<PlayerInventory>();
         _inventorySize = 9;
         Init();
-        _tableInventoryDisplay.Init(this, _inventory);
-        _playerInventoryDisplay.Init(pInventory, pInventory.Model);
+        PlayerInventory pInventory = ServiceLocator.Current.Get<PlayerInventory>();
+        _tableInventoryDisplay.Init(this);
+        _playerInventoryDisplay.Init(pInventory);
         UpdateRecipe();
     }
 
-    public override void OnLeftBtnSlotClicked(InventorySlotDisplay slot)
+    public void UpdateConnectionWithPlayerInventory(bool isConnected)
     {
-        base.OnLeftBtnSlotClicked(slot);
-        UpdateRecipe();
+        var playerInventory = ServiceLocator.Current.Get<PlayerInventory>();
+        if (isConnected)
+        {
+            playerInventory.SetOtherInventory(this);
+            SetOtherInventory(playerInventory);
+        }
+        else
+        {
+            playerInventory.SetOtherInventory(null);
+            SetOtherInventory(null);
+        }
     }
 
     private void UpdateRecipe()
     {
+        Debug.Log("RecipeUpdated");
         foreach (var recipe in _recipeDatas)
         {
-            bool isCanCraft = true;
-            foreach (var ingredient in recipe.Ingredients)
+            bool isCanCraft = CanCraft(recipe);
+            if (isCanCraft)
             {
-                if(_inventory.ItemContainedCount(ingredient.Item) < ingredient.Amount)
-                {
-                    Debug.Log(isCanCraft);
-                    isCanCraft = false;
-                }
-            }
-            if(isCanCraft)
-            {
-                Debug.Log("Success");
-                recipeInfo.gameObject.SetActive(true);
-                recipeInfo.Init(recipe.Result,1);
+                DisplayRecipeInfo(recipe);
                 break;
             }
             else
@@ -56,8 +54,33 @@ public class CraftSystem : InventoryController
         }
     }
 
+    public override void UpdateHolder()
+    {
+        UpdateRecipe();
+    }
+
+    private bool CanCraft(RecipeData recipe)
+    {
+        foreach (var ingredient in recipe.Ingredients)
+        {
+            if (_inventory.ItemContainedCount(ingredient.Item) < ingredient.Amount)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void DisplayRecipeInfo(RecipeData recipe)
+    {
+        recipeInfo.gameObject.SetActive(true);
+        recipeInfo.Init(recipe.Result, 1);
+    }
+
     public override int AddItem(ItemData itemData, int count)
     {
-        return 0;
+        int ammountToReturn = _inventory.AddItem(itemData, count);
+        UpdateRecipe();
+        return ammountToReturn;
     }
 }

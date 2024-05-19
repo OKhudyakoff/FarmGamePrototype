@@ -4,11 +4,10 @@ using Utilities;
 
 public class Menu : MonoBehaviour, IService
 {
-    [SerializeField] private GameObject _menuPanel;
+    [SerializeField] private BaseWindow _menuPanel;
     [SerializeField] private TabSystem _tabSystem;
     private InputHandler _inputHandler;
     private PlayerInventory _inventoryController;
-    private Mouse _mouse;
     private TimeManager _timeManager;
     private bool _isMenuOpened = false;
 
@@ -17,7 +16,6 @@ public class Menu : MonoBehaviour, IService
     {
         _inputHandler = ServiceLocator.Current.Get<InputHandler>();
         _inventoryController = ServiceLocator.Current.Get<PlayerInventory>();
-        _mouse = ServiceLocator.Current.Get<Mouse>();
         _timeManager = ServiceLocator.Current.Get<TimeManager>();
 
         _inputHandler.OnInventoryTriggered += InventoryTriggered;
@@ -25,7 +23,6 @@ public class Menu : MonoBehaviour, IService
 
         _tabSystem.Init();
         _isMenuOpened = false;
-        _menuPanel.SetActive(false);
     }
 
     private void OnDisable()
@@ -38,18 +35,18 @@ public class Menu : MonoBehaviour, IService
     {
         if(_isMenuOpened && tabID == _tabSystem.CurrentTabID || _isMenuOpened && tabID == 2)
         {
-            Mouse.LockCursor();
             _timeManager.ContinueTime();
             _isMenuOpened = false;
-            _menuPanel.SetActive(false);
+            ServiceLocator.Current.Get<WindowsManager>().CloseAllWindows();
+            _inventoryController.SetOtherInventory(null);
         }
         else
         {
             _timeManager.PauseTime();
-            Mouse.UnlockCursor();
             _tabSystem.SwitchTab(tabID);
             _isMenuOpened = true;
-            _menuPanel.SetActive(true);
+            _menuPanel.Open();
+            _inventoryController.ConnectWithHootbar();
         }
     }
 

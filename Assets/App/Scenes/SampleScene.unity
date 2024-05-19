@@ -3878,6 +3878,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 367380020}
+  - component: {fileID: 367380021}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -3906,6 +3907,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1200, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &367380021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367380019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701bd462302c96b449e3e059925d0fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &370239271
 GameObject:
   m_ObjectHideFlags: 0
@@ -6724,6 +6737,7 @@ GameObject:
   - component: {fileID: 566191399}
   - component: {fileID: 566191398}
   - component: {fileID: 566191397}
+  - component: {fileID: 566191400}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -6814,6 +6828,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &566191400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566191395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977769f575a0bc44c867f0e26f79bd49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &569118094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8094746380649865703, guid: 63622c9ec1b6ad64da45da47b8b32e43,
@@ -13656,7 +13682,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507b1567e83d8f141808c0248b31bf54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _craftCanvas: {fileID: 566191399}
+  _craftCanvas: {fileID: 566191400}
+  isOpened: 0
 --- !u!1001 &1261738196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13932,6 +13959,7 @@ GameObject:
   - component: {fileID: 1298745807}
   - component: {fileID: 1298745806}
   - component: {fileID: 1298745809}
+  - component: {fileID: 1298745810}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -14035,6 +14063,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 0}
+--- !u!114 &1298745810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298745804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977769f575a0bc44c867f0e26f79bd49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1301462914
 GameObject:
   m_ObjectHideFlags: 0
@@ -19698,7 +19738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33ba6339760626248bef09daba6e54e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _menuPanel: {fileID: 367380019}
+  _menuPanel: {fileID: 367380021}
   _tabSystem: {fileID: 2028042541}
 --- !u!1001 &2054022036
 PrefabInstance:
@@ -26052,7 +26092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e135a5a4ebd8eb4a8ba15110589d073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactionPanel: {fileID: 1298745804}
+  _interactionPanel: {fileID: 1298745810}
   _buttonHolderl: {fileID: 26783455}
   _interactionButtonPrefab: {fileID: 5343408371489162840, guid: 7b1a666b878fc4c48ad55370fdbcad87,
     type: 3}

@@ -20,36 +20,17 @@ namespace InventorySystem.UI
         {
             RemoveSelection();
             _slotHolder = controller;
-            if(slot != null)
-            {
-                InvSlot = slot;
-                InvSlot.OnSlotUpdated += UpdateSlot;
-                UpdateSlot();
-            }
-            else
-            {
-                HideUI();
-            }
+            InvSlot = slot;
+            InvSlot.OnSlotUpdated += UpdateSlot;
+            UpdateSlot();
         }
 
-        public void UpdateSlot()
+        private void UpdateSlot()
         {
-            if(!InvSlot.IsEmpty)
+            if (!InvSlot.IsEmpty)
             {
                 itemImage.sprite = InvSlot.ItemData.ItemSprite;
                 amountText.text = InvSlot.StackSize.ToString();
-                UpdateVisualState();
-            }
-            else
-            {
-                HideUI();
-            }
-        }
-
-        private void UpdateVisualState()
-        {
-            if (!InvSlot.IsLockedToDisplay)
-            {
                 itemImage.gameObject.SetActive(true);
                 amountText.gameObject.SetActive(true);
             }
@@ -57,9 +38,10 @@ namespace InventorySystem.UI
             {
                 HideUI();
             }
+            _slotHolder.UpdateHolder();
         }
 
-        public void HideUI()
+        private void HideUI()
         {
             itemImage.gameObject.SetActive(false);
             amountText.gameObject.SetActive(false);
@@ -72,7 +54,7 @@ namespace InventorySystem.UI
 
         public void OnPointerUp(PointerEventData eventData)
         {
-            if(eventData.button == PointerEventData.InputButton.Right)
+            if (eventData.button == PointerEventData.InputButton.Right)
             {
                 OnRightClick();
             }
@@ -112,8 +94,10 @@ namespace InventorySystem.UI
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            if(InvSlot != null && !InvSlot.IsEmpty)
+            if (InvSlot != null && !InvSlot.IsEmpty)
+            {
                 ServiceLocator.Current.Get<ToolTip>().Show(InvSlot.ItemData.ItemDescription, InvSlot.ItemData.ItemName, InvSlot.ItemData.ItemSprite);
+            }
         }
 
         private void OnLeftClick()
@@ -124,12 +108,16 @@ namespace InventorySystem.UI
 
         private void OnRightClick()
         {
+            click = false;
             _slotHolder.OnRightBtnSlotClicked(this);
         }
 
         private void OnDestroy()
         {
-            InvSlot.OnSlotUpdated -= UpdateSlot;
+            if (InvSlot != null)
+            {
+                InvSlot.OnSlotUpdated -= UpdateSlot;
+            }
         }
     }
 }
