@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace InventorySystem
 {
-    public abstract class InventoryController : MonoBehaviour
+    public abstract class InventoryController : MonoBehaviour, ISlotHolder
     {
         [SerializeField] private bool playerHaveAccess;
         protected int _inventorySize;
@@ -19,48 +19,47 @@ namespace InventorySystem
 
         public void RemoveItem(ItemData itemData, int count)
         {
-            if (_inventory.GetItemCount(itemData) >= count)
+            if (_inventory.ItemContainedCount(itemData) >= count)
             {
                 _inventory.RemoveItem(itemData, count);
             }
         }
 
-        public void OnSlotLeftClicked(InventorySlotDisplay clickedSlotDisplay)
+        public virtual void OnLeftBtnSlotClicked(InventorySlotDisplay slot)
         {
             MouseSlot _mouseSlot = ServiceLocator.Current.Get<Mouse>().MouseSlot;
             if (playerHaveAccess)
             {
-                if (!clickedSlotDisplay.InvSlot.IsEmpty)
+                if (!slot.InvSlot.IsEmpty)
                 {
                     if (_mouseSlot.IsEmpty)
                     {
-                        clickedSlotDisplay.HideUI();
-                        _mouseSlot.Set(clickedSlotDisplay.InvSlot);
+                        _mouseSlot.Set(slot.InvSlot);
                     }
                     else
                     {
-                        if (_mouseSlot.Slot == clickedSlotDisplay.InvSlot)
+                        if (_mouseSlot.Slot == slot.InvSlot)
                         {
                             _mouseSlot.ClearSlot();
                         }
-                        else if (_mouseSlot.Slot.ItemData == clickedSlotDisplay.InvSlot.ItemData)
+                        else if (_mouseSlot.Slot.ItemData == slot.InvSlot.ItemData)
                         {
-                            if (_mouseSlot.Slot.StackSize > clickedSlotDisplay.InvSlot.ItemData.MaxStackSize - clickedSlotDisplay.InvSlot.StackSize)
+                            if (_mouseSlot.Slot.StackSize > slot.InvSlot.ItemData.MaxStackSize - slot.InvSlot.StackSize)
                             {
-                                int countToAdd = clickedSlotDisplay.InvSlot.ItemData.MaxStackSize - clickedSlotDisplay.InvSlot.StackSize;
-                                clickedSlotDisplay.InvSlot.AddItem(countToAdd);
-                                _mouseSlot.Slot.RemoveItem(countToAdd);
+                                int countToAdd = slot.InvSlot.ItemData.MaxStackSize - slot.InvSlot.StackSize;
+                                slot.InvSlot.IncreaseQuantity(countToAdd);
+                                _mouseSlot.Slot.DecreaseQuantity(countToAdd);
                             }
                             else
                             {
-                                clickedSlotDisplay.InvSlot.AddItem(_mouseSlot.Slot.StackSize);
-                                _mouseSlot.Slot.RemoveItem(_mouseSlot.Slot.StackSize);
+                                slot.InvSlot.IncreaseQuantity(_mouseSlot.Slot.StackSize);
+                                _mouseSlot.Slot.DecreaseQuantity(_mouseSlot.Slot.StackSize);
                             }
                         }
                         else
                         {
                             // Swap items
-                            SwapSlots(_mouseSlot.Slot, clickedSlotDisplay.InvSlot);
+                            SwapSlots(_mouseSlot.Slot, slot.InvSlot);
                         }
                     }
                 }
@@ -68,45 +67,31 @@ namespace InventorySystem
                 {
                     if (!_mouseSlot.IsEmpty)
                     {
-                        clickedSlotDisplay.InvSlot.SetItem(_mouseSlot.Slot.ItemData, _mouseSlot.Slot.StackSize);
-                        _mouseSlot.Slot.RemoveItem(_mouseSlot.Slot.StackSize);
+                        slot.InvSlot.SetItem(_mouseSlot.Slot.ItemData, _mouseSlot.Slot.StackSize);
+                        _mouseSlot.Slot.DecreaseQuantity(_mouseSlot.Slot.StackSize);
                     }
                 }
-                UpdateDisplay();
             }
         }
-
-        public virtual void UpdateDisplay() {}
 
         public void SwapSlots(InventorySlot slotA, InventorySlot slotB)
         {
             InventorySlot tmpSlot = new InventorySlot();
             tmpSlot.SetItem(slotB.ItemData, slotB.StackSize);
             slotB.SetItem(slotA.ItemData, slotA.StackSize);
-            slotA.SetItem(tmpSlot.ItemData, tmpSlot.StackSize);
+            slotA.SetItem(tmpSlot.ItemData, tmpSlot.StackSize, slotA.IsLockedToDisplay);
         }
 
-        public void OnSlotRightClicked(InventorySlotDisplay clickedSlotDisplay)
+        public virtual void OnRightBtnSlotClicked(InventorySlotDisplay slot)
         {
             if(playerHaveAccess)
             {
                 MouseSlot _mouseSlot = ServiceLocator.Current.Get<Mouse>().MouseSlot;
-                if (!clickedSlotDisplay.InvSlot.IsEmpty && _mouseSlot.IsEmpty)
+                if (!slot.InvSlot.IsEmpty && _mouseSlot.IsEmpty)
                 {
-                    _mouseSlot.SplitStack(clickedSlotDisplay.InvSlot);
+                    _mouseSlot.SplitStack(slot.InvSlot);
                 }
             }
-        }
-
-        public void OnPointerEnter(InventorySlot slot)
-        {
-            if(!slot.IsEmpty)
-                ServiceLocator.Current.Get<ToolTip>().Show(slot.ItemData.ItemDescription, slot.ItemData.ItemName, slot.ItemData.ItemSprite);
-        }
-
-        public void OnPointerExit()
-        {
-            ServiceLocator.Current.Get<ToolTip>().Hide();
         }
 
         public List<ItemData> ItemsInInventory()
@@ -124,7 +109,7 @@ namespace InventorySystem
 
         public int ItemCount(ItemData item)
         {
-            return _inventory.GetItemCount(item);
+            return _inventory.ItemContainedCount(item);
         }
     }
 }

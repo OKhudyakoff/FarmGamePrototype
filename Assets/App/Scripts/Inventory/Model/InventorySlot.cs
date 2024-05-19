@@ -6,35 +6,35 @@ namespace InventorySystem.Model
     public class InventorySlot
     {
         public ItemData ItemData { get; private set; }
-        private int _stackSize = 0;
-        public int StackSize => _stackSize;
+        public int StackSize { get; private set; }
         public Action OnSlotUpdated;
-        public bool IsMouseSlot;
+        public bool IsLockedToDisplay;
 
         public InventorySlot()
         {
             ItemData = null;
-            _stackSize = 0;
-            IsMouseSlot = false;
+            StackSize = 0;
+            IsLockedToDisplay = false;
         }
 
-        public void SetItem(ItemData itemData, int count)
+        public void SetItem(ItemData itemData, int count = 1, bool isLockedToDisplay = false)
         {
             this.ItemData = itemData;
-            _stackSize = count;
+            StackSize = count;
+            IsLockedToDisplay = isLockedToDisplay;
             OnSlotUpdated?.Invoke();
         }
 
-        public void AddItem(int countToAdd)
+        public void IncreaseQuantity(int countToAdd)
         {
-            _stackSize += countToAdd;
+            StackSize += countToAdd;
             OnSlotUpdated?.Invoke();
         }
 
-        public void RemoveItem(int countToRemove)
+        public void DecreaseQuantity(int countToRemove)
         {
-            _stackSize -= countToRemove;
-            if (_stackSize <= 0)
+            StackSize -= countToRemove;
+            if (StackSize <= 0)
                 ClearSlot();
             else
             {
@@ -45,7 +45,8 @@ namespace InventorySystem.Model
         public void ClearSlot()
         {
             ItemData = null;
-            _stackSize = 0;
+            StackSize = 0;
+            IsLockedToDisplay = false;
             OnSlotUpdated?.Invoke();
         }
 

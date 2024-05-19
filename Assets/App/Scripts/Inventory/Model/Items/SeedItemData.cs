@@ -24,7 +24,7 @@ namespace InventorySystem
             if (land != null && land.IsFree())
             {
                 land.Plant(_plantData);
-                slot.RemoveItem(1);
+                slot.DecreaseQuantity(1);
             }
         }
     }

@@ -11,15 +11,15 @@ namespace InventorySystem.UI
         [SerializeField] private Image itemImage;
         [SerializeField] private TMP_Text amountText;
         [SerializeField] private GameObject selection;
-        public InventorySlot InvSlot { get; private set; }
-        private InventoryController _inventoryController;
-        private bool click;
+        private ISlotHolder _slotHolder;
 
-        public void Init(InventorySlot slot, InventoryController controller)
+        private bool click;
+        public InventorySlot InvSlot { get; private set; }
+
+        public void Init(InventorySlot slot, ISlotHolder controller)
         {
             RemoveSelection();
-            _inventoryController = controller;
-            if (InvSlot != null) InvSlot.OnSlotUpdated -= UpdateSlot;
+            _slotHolder = controller;
             if(slot != null)
             {
                 InvSlot = slot;
@@ -34,14 +34,24 @@ namespace InventorySystem.UI
 
         public void UpdateSlot()
         {
-            if(InvSlot != null && !InvSlot.IsEmpty)
+            if(!InvSlot.IsEmpty)
             {
-                if(!InvSlot.IsMouseSlot)
-                {
-                    ShowUI();
-                }
                 itemImage.sprite = InvSlot.ItemData.ItemSprite;
                 amountText.text = InvSlot.StackSize.ToString();
+                UpdateVisualState();
+            }
+            else
+            {
+                HideUI();
+            }
+        }
+
+        private void UpdateVisualState()
+        {
+            if (!InvSlot.IsLockedToDisplay)
+            {
+                itemImage.gameObject.SetActive(true);
+                amountText.gameObject.SetActive(true);
             }
             else
             {
@@ -53,19 +63,6 @@ namespace InventorySystem.UI
         {
             itemImage.gameObject.SetActive(false);
             amountText.gameObject.SetActive(false);
-        }
-
-        public void ShowUI()
-        {
-            if(!InvSlot.IsEmpty)
-            {
-                itemImage.gameObject.SetActive(true);
-                amountText.gameObject.SetActive(true);
-            }
-            else 
-            { 
-                HideUI(); 
-            }
         }
 
         public void OnPointerDown(PointerEventData eventData)
@@ -98,17 +95,6 @@ namespace InventorySystem.UI
             }
         }
 
-        private void OnLeftClick()
-        {
-            click = false;
-            _inventoryController.OnSlotLeftClicked(this);
-        }
-
-        private void OnRightClick()
-        {
-            _inventoryController.OnSlotRightClicked(this);
-        }
-
         public void SetSelection()
         {
             selection.SetActive(true);
@@ -121,12 +107,29 @@ namespace InventorySystem.UI
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            _inventoryController.OnPointerExit();
+            ServiceLocator.Current.Get<ToolTip>().Hide();
         }
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            _inventoryController.OnPointerEnter(InvSlot);
+            if(InvSlot != null && !InvSlot.IsEmpty)
+                ServiceLocator.Current.Get<ToolTip>().Show(InvSlot.ItemData.ItemDescription, InvSlot.ItemData.ItemName, InvSlot.ItemData.ItemSprite);
+        }
+
+        private void OnLeftClick()
+        {
+            click = false;
+            _slotHolder.OnLeftBtnSlotClicked(this);
+        }
+
+        private void OnRightClick()
+        {
+            _slotHolder.OnRightBtnSlotClicked(this);
+        }
+
+        private void OnDestroy()
+        {
+            InvSlot.OnSlotUpdated -= UpdateSlot;
         }
     }
 }

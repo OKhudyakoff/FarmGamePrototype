@@ -14,12 +14,10 @@ public class InteractionList : MonoBehaviour, IInteraction
     private List<InterationUIButton> _buttonList = new List<InterationUIButton>();
     private Outline _outline;
     private bool _isInteractionStarted = false;
-    private Mouse _mouse;
 
     private void Start()
     {
         _outline = GetComponent<Outline>();
-        _mouse = ServiceLocator.Current.Get<Mouse>();
         InitPanel();
         DeselectObject();
     }
@@ -51,7 +49,7 @@ public class InteractionList : MonoBehaviour, IInteraction
         _outline.enabled = false;
         _isInteractionStarted = false;
         _interactionPanel.SetActive(false);
-        _mouse.LockCursor();
+        Mouse.LockCursor();
     }
 
     public void Interact(Interactor interactor)
@@ -60,13 +58,13 @@ public class InteractionList : MonoBehaviour, IInteraction
         {
             _isInteractionStarted = true;
             _interactionPanel.SetActive(true);
-            _mouse.UnlockCursor();
+            Mouse.UnlockCursor();
         }
         else
         {
             _isInteractionStarted = false;
             _interactionPanel.SetActive(false);
-            _mouse.LockCursor();
+            Mouse.LockCursor();
         }
     }
 

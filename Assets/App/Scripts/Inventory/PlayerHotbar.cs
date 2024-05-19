@@ -46,12 +46,6 @@ public class PlayerHotbar : InventoryController
         return _inventory.AddItem(itemData, count);
     }
 
-    public override void UpdateDisplay()
-    {
-        _hudDisplay.UpdateSlotDisplays();
-        ChangeCurrentSelectedSlot(0);
-    }
-
     private void ChangeCurrentSelectedSlot(float value)
     {
         if (_hudDisplay.Slots.Count > 0)

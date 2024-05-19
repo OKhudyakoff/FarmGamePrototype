@@ -6,23 +6,35 @@ public class Mouse : MonoBehaviour,IService
     [SerializeField] private MouseSlot _mouseSlot;
     public MouseSlot MouseSlot => _mouseSlot;
     public bool IsCursorLocked { get; private set; }
+    private static Mouse _instance;
+
+    private void Awake()
+    {
+        if(_instance == null)
+            _instance = this;
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
     private void Start()
     {
         LockCursor();
     }
 
-    public void LockCursor()
+    public static void LockCursor()
     {
-        IsCursorLocked = true;
+        _instance.IsCursorLocked = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         ServiceLocator.Current.Get<ToolTip>().Hide();
+        _instance._mouseSlot.ClearSlot();
     }
 
-    public void UnlockCursor()
+    public static void UnlockCursor()
     {
-        IsCursorLocked = false;
+        _instance.IsCursorLocked = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }

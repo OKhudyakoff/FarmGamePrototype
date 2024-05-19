@@ -71,6 +71,8 @@ public class PlayerController : MonoBehaviour, IService
             transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
         }
 
+        vertical = _controller.isGrounded ? 0f : -gravity;
+
 
         Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
         _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +

@@ -97,7 +97,6 @@ namespace FarmingPlants
             _isWatered = true;
             _wateredTime = 0;
             _notWateredTime = 0;
-            Debug.Log("Watered");
         }
 
         public void PlowTheLand()

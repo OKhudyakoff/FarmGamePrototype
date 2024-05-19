@@ -38,7 +38,7 @@ public class Menu : MonoBehaviour, IService
     {
         if(_isMenuOpened && tabID == _tabSystem.CurrentTabID || _isMenuOpened && tabID == 2)
         {
-            _mouse.LockCursor();
+            Mouse.LockCursor();
             _timeManager.ContinueTime();
             _isMenuOpened = false;
             _menuPanel.SetActive(false);
@@ -46,7 +46,7 @@ public class Menu : MonoBehaviour, IService
         else
         {
             _timeManager.PauseTime();
-            _mouse.UnlockCursor();
+            Mouse.UnlockCursor();
             _tabSystem.SwitchTab(tabID);
             _isMenuOpened = true;
             _menuPanel.SetActive(true);
@@ -60,7 +60,6 @@ public class Menu : MonoBehaviour, IService
 
     public void InventoryTriggered()
     {
-        _inventoryController.UpdateDisplay();
         OpenTab(0);
     }
 

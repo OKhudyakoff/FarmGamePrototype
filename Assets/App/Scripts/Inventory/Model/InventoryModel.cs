@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace InventorySystem.Model
 {
@@ -16,8 +15,9 @@ namespace InventorySystem.Model
             }
         }
 
-        public int AddItem(ItemData item, int count)
+        public int AddItem(ItemData item, int count = 1)
         {
+            // Fill slots with same item
             foreach (InventorySlot slot in Slots)
             {
                 if (slot.ItemData == item)
@@ -25,16 +25,16 @@ namespace InventorySystem.Model
                     if (count > slot.ItemData.MaxStackSize - slot.StackSize)
                     {
                         count -= slot.ItemData.MaxStackSize - slot.StackSize;
-                        slot.AddItem(slot.ItemData.MaxStackSize - slot.StackSize);
+                        slot.IncreaseQuantity(slot.ItemData.MaxStackSize - slot.StackSize);
                     }
                     else
                     {
-                        slot.AddItem(count);
+                        slot.IncreaseQuantity(count);
                         return 0;
                     }
                 }
             }
-            //Fill empty slots
+            // Fill empty slots
             foreach (InventorySlot slot in Slots)
             {
                 if (slot.IsEmpty)
@@ -54,7 +54,7 @@ namespace InventorySystem.Model
             return count;
         }
 
-        public bool IsContain(ItemData item, int count)
+        public bool IsContainsItem(ItemData item, int count = 1)
         {
             int amount = 0;
             foreach (InventorySlot slot in Slots)
@@ -67,7 +67,7 @@ namespace InventorySystem.Model
             return amount >= count;
         }
 
-        public int GetItemCount(ItemData item)
+        public int ItemContainedCount(ItemData item)
         {
             int amount = 0;
             for (int i = 0; i < Slots.Count; i++)
@@ -80,7 +80,7 @@ namespace InventorySystem.Model
             return amount;
         }
 
-        public void RemoveItem(ItemData item, int count)
+        public void RemoveItem(ItemData item, int count = 1)
         {
             foreach (InventorySlot slot in Slots)
             {
@@ -95,7 +95,7 @@ namespace InventorySystem.Model
                         }
                         else
                         {
-                            slot.RemoveItem(count);
+                            slot.DecreaseQuantity(count);
                             count = 0;
                         }
                     }

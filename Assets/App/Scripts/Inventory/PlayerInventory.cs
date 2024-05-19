@@ -8,8 +8,9 @@ namespace InventorySystem
     {
         [SerializeField] private int inventorySize;
         [SerializeField] private InventoryDisplay _display;
-        [SerializeField] private GameObject _panel;
         [SerializeField] private PlayerHotbar _hotbar;
+
+        public InventoryModel Model => _inventory;
 
         public override void Init()
         {
@@ -23,11 +24,6 @@ namespace InventorySystem
             count = _hotbar.AddItem(itemData, count);
             if (count > 0) { _inventory.AddItem(itemData, count); }
             return count;
-        }
-
-        public override void UpdateDisplay()
-        {
-            _display.UpdateSlotDisplays();
         }
     }
 }
