@@ -6,6 +6,7 @@ public class MainMenuController: MonoBehaviour, IService
 {
     [SerializeField] private BaseWindow _menuPanel;
     [SerializeField] private TabSystem _tabSystem;
+    [SerializeField] private GameSettingsUI _gameSettingsUI;
     private InputHandler _inputHandler;
     private PlayerInventory _inventoryController;
     private TimeManager _timeManager;
@@ -22,6 +23,7 @@ public class MainMenuController: MonoBehaviour, IService
         _inputHandler.OnPauseTriggered += PauseTriggered;
 
         _tabSystem.Init();
+        _gameSettingsUI.Init();
         _isMenuOpened = false;
     }
 

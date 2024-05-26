@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using InventorySystem.Model;
-using UnityEditor;
+using UnityEngine;
 
 public class ItemDatabase: IService
 {
@@ -8,15 +8,7 @@ public class ItemDatabase: IService
 
     public void LoadAllItems()
     {
-        AllItemsList = new List<ItemData>();
-
-        string[] guids = AssetDatabase.FindAssets("t:ItemData");
-        foreach (string guid in guids)
-        {
-            string path = AssetDatabase.GUIDToAssetPath(guid);
-            ItemData item = AssetDatabase.LoadAssetAtPath<ItemData>(path);
-            AllItemsList.Add(item);
-        }
+        AllItemsList = new List<ItemData>(Resources.LoadAll<ItemData>(""));
     }
 
     public void Init()

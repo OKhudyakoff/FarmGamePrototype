@@ -15,7 +15,9 @@ namespace InventorySystem.Controllers
         public override void Init()
         {
             _inventorySize = inventorySize;
-            base.Init();
+            _inventory = new InventoryModel(_inventorySize);
+            _inputHandler = ServiceLocator.Current.Get<InputHandler>();
+            _mouseSlot = ServiceLocator.Current.Get<MouseItemSlot>();
             _display.Init(this);
         }
 

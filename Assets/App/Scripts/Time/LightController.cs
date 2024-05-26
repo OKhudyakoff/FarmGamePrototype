@@ -41,10 +41,13 @@ public class LightController : MonoBehaviour
 
     private void Start()
     {
-        _timeManager = ServiceLocator.Current.Get<TimeManager>();
-        _ticksCountInDay = _timeManager.TicksCountInDay();
-        Debug.Log(_ticksCountInDay);
-        tmp = ((float)TimeManager.DateTime.TotalMinutes % 1440 / 1440) * _ticksCountInDay;
+        if(Application.isPlaying)
+        {
+            _timeManager = ServiceLocator.Current.Get<TimeManager>();
+            _ticksCountInDay = _timeManager.TicksCountInDay();
+            Debug.Log(_ticksCountInDay);
+            tmp = ((float)TimeManager.DateTime.TotalMinutes % 1440 / 1440) * _ticksCountInDay;
+        }
     }
 
     private void Update()

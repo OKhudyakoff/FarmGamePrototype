@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using UnityEditor;
+using UnityEngine;
 
 public class RecipeDatabase : IService
 {
@@ -7,15 +7,7 @@ public class RecipeDatabase : IService
 
     public void LoadAllItems()
     {
-        AllRecipesList = new List<RecipeData>();
-
-        string[] guids = AssetDatabase.FindAssets("t:RecipeData");
-        foreach (string guid in guids)
-        {
-            string path = AssetDatabase.GUIDToAssetPath(guid);
-            RecipeData item = AssetDatabase.LoadAssetAtPath<RecipeData>(path);
-            AllRecipesList.Add(item);
-        }
+        AllRecipesList = new List<RecipeData>(Resources.LoadAll<RecipeData>(""));
     }
 
     public void Init()

@@ -34,14 +34,14 @@ public class CraftTable : InventoryController, IInteraction
 
     private void Start()
     {
+        _recipeDatas = ServiceLocator.Current.Get<RecipeDatabase>().AllRecipesList;
+        _craftSystem = new CraftSystem(this, _recipeDatas);
+        
         _inventorySize = inventorySize;
         Init();
         _playerInventory = ServiceLocator.Current.Get<PlayerInventory>();
         _playerInventoryDisplay.Init(_playerInventory);
-
-        _craftSystem = new CraftSystem(this, _recipeDatas);
         _craftWindow.SetTable(this);
-        _recipeDatas = ServiceLocator.Current.Get<RecipeDatabase>().AllRecipesList;
 
         _tableInventoryDisplay.Init(this);
 

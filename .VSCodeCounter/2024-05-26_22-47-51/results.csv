@@ -1,0 +1,120 @@
+"filename", "language", "JSON", "Markdown", "C#", "UnityShader", "UnityAssemblyDefinition", "comment", "blank", "total"
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Assets\PolygonDog\Scripts\POLYGON_CameraController.cs", "C#", 0, 0, 43, 0, 0, 13, 0, 56
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Assets\PolygonDog\Scripts\POLYGON_DogAnimationController.cs", "C#", 0, 0, 461, 0, 0, 10, 2, 473
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Assets\PolygonDog\Scripts\POLYGON_DogPrefabs.cs", "C#", 0, 0, 283, 0, 0, 13, 1, 297
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Assets\QuickOutline\Resources\Shaders\OutlineFill.shader", "UnityShader", 0, 0, 0, 58, 0, 7, 17, 82
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Assets\QuickOutline\Resources\Shaders\OutlineMask.shader", "UnityShader", 0, 0, 0, 22, 0, 7, 5, 34
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs", "C#", 0, 0, 65, 0, 0, 0, 15, 80
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs", "C#", 0, 0, 25, 0, 0, 0, 9, 34
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs", "C#", 0, 0, 19, 0, 0, 8, 9, 36
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs", "C#", 0, 0, 33, 0, 0, 0, 9, 42
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs", "C#", 0, 0, 87, 0, 0, 0, 26, 113
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs", "C#", 0, 0, 95, 0, 0, 1, 30, 126
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Assets\StarterAssets\ThirdPersonController\Scripts\BasicRigidBodyPush.cs", "C#", 0, 0, 21, 0, 0, 6, 8, 35
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Assets\StarterAssets\ThirdPersonController\Scripts\ThirdPersonController.cs", "C#", 0, 0, 277, 0, 0, 42, 73, 392
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Assets\StarterAssets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs", "C#", 0, 0, 126, 0, 0, 1, 32, 159
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Assets\StarterAssets\TutorialInfo\Scripts\Readme.cs", "C#", 0, 0, 12, 0, 0, 0, 3, 15
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Materials\SkyboxDual.shader", "UnityShader", 0, 0, 0, 110, 0, 3, 23, 136
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\CraftSystem\CraftRecipeObjectUI.cs", "C#", 0, 0, 22, 0, 0, 0, 3, 25
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\CraftSystem\CraftSystem.asmdef", "UnityAssemblyDefinition", 0, 0, 0, 0, 18, 0, 0, 18
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\CraftSystem\CraftSystem.cs", "C#", 0, 0, 50, 0, 0, 0, 7, 57
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\CraftSystem\Editor\RecipeDataEditor.cs", "C#", 0, 0, 46, 0, 0, 6, 9, 61
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\CraftSystem\RecipeData.cs", "C#", 0, 0, 12, 0, 0, 0, 3, 15
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\CraftSystem\RecipeDatabase.cs", "C#", 0, 0, 21, 0, 0, 0, 5, 26
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\CraftSystem\RecipeInfo.cs", "C#", 0, 0, 28, 0, 0, 0, 5, 33
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\CraftTable.cs", "C#", 0, 0, 113, 0, 0, 0, 14, 127
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\FarmingSystem\Land.cs", "C#", 0, 0, 124, 0, 0, 0, 22, 146
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\FarmingSystem\PlantData.cs", "C#", 0, 0, 26, 0, 0, 0, 9, 35
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\FarmingSystem\PlantedPlantController.cs", "C#", 0, 0, 117, 0, 0, 0, 20, 137
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\GameMenu\MainMenuController.cs", "C#", 0, 0, 57, 0, 0, 0, 11, 68
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\GameMenu\TabSystem.cs", "C#", 0, 0, 44, 0, 0, 0, 6, 50
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\DebugObjectTextMeshPro.cs", "C#", 0, 0, 31, 0, 0, 5, 4, 40
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\FpsCounter.cs", "C#", 0, 0, 13, 0, 0, 0, 3, 16
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\FpsCounterDispay.cs", "C#", 0, 0, 19, 0, 0, 0, 4, 23
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\GameDebugger.cs", "C#", 0, 0, 28, 0, 0, 0, 5, 33
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\General.asmdef", "UnityAssemblyDefinition", 0, 0, 0, 0, 17, 0, 0, 17
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\IService.cs", "C#", 0, 0, 7, 0, 0, 0, 2, 9
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\Input\InputHandler.cs", "C#", 0, 0, 108, 0, 0, 0, 28, 136
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\Input\PlayerControls.cs", "C#", 0, 0, 562, 0, 0, 14, 24, 600
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\LightPreset.cs", "C#", 0, 0, 8, 0, 0, 0, 2, 10
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\LookAtCamera.cs", "C#", 0, 0, 13, 0, 0, 0, 4, 17
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\MonoObjectPool.cs", "C#", 0, 0, 58, 0, 0, 0, 6, 64
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\Mouse.cs", "C#", 0, 0, 32, 0, 0, 0, 7, 39
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\ServiceLocator.cs", "C#", 0, 0, 45, 0, 0, 0, 9, 54
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\ToolTipController.cs", "C#", 0, 0, 86, 0, 0, 0, 14, 100
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\WindowsSystem\BaseWindow.cs", "C#", 0, 0, 32, 0, 0, 0, 9, 41
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Base\WindowsSystem\WindowsManager.cs", "C#", 0, 0, 79, 0, 0, 0, 11, 90
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Concrete\WindowsSystem\CraftTableWindow.cs", "C#", 0, 0, 48, 0, 0, 0, 9, 57
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\Concrete\WindowsSystem\MenuWindow.cs", "C#", 0, 0, 8, 0, 0, 0, 1, 9
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\General\GameServiceLocator.cs", "C#", 0, 0, 54, 0, 0, 0, 8, 62
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InteractionSystem\Base\IInteraction.cs", "C#", 0, 0, 7, 0, 0, 0, 2, 9
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InteractionSystem\Base\InteractionButtonUI.cs", "C#", 0, 0, 10, 0, 0, 0, 3, 13
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InteractionSystem\Base\InteractionSystem.asmdef", "UnityAssemblyDefinition", 0, 0, 0, 0, 16, 0, 0, 16
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InteractionSystem\Base\Interactor.cs", "C#", 0, 0, 15, 0, 0, 0, 3, 18
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InteractionSystem\Base\Outline.cs", "C#", 0, 0, 193, 0, 0, 39, 78, 310
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InteractionSystem\DoorInteraction.cs", "C#", 0, 0, 31, 0, 0, 0, 6, 37
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InteractionSystem\InteractionList.cs", "C#", 0, 0, 72, 0, 0, 0, 9, 81
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InteractionSystem\PlayerInteractor.cs", "C#", 0, 0, 54, 0, 0, 0, 9, 63
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Base\Controller\InventoryController.cs", "C#", 0, 0, 145, 0, 0, 0, 21, 166
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Base\Interfaces\ISlotHolder.cs", "C#", 0, 0, 7, 0, 0, 0, 4, 11
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Base\InventorySystem.asmdef", "UnityAssemblyDefinition", 0, 0, 0, 0, 17, 0, 0, 17
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Base\Model\InventoryModel.cs", "C#", 0, 0, 103, 0, 0, 2, 6, 111
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Base\Model\InventorySlot.cs", "C#", 0, 0, 51, 0, 0, 0, 8, 59
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Base\Model\Items\ItemData.cs", "C#", 0, 0, 24, 0, 0, 0, 3, 27
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Base\Model\Items\ItemDatabase.cs", "C#", 0, 0, 22, 0, 0, 0, 6, 28
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Base\Model\MouseItemSlot.cs", "C#", 0, 0, 64, 0, 0, 0, 9, 73
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Base\UI\DropItemZone.cs", "C#", 0, 0, 25, 0, 0, 0, 5, 30
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Base\UI\HudDisplay.cs", "C#", 0, 0, 23, 0, 0, 0, 4, 27
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Base\UI\InventoryDisplay.cs", "C#", 0, 0, 46, 0, 0, 0, 7, 53
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Base\UI\InventorySlotDisplay.cs", "C#", 0, 0, 99, 0, 0, 0, 16, 115
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Concrete\Controllers\PlayerHotbar.cs", "C#", 0, 0, 103, 0, 0, 0, 16, 119
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Concrete\Controllers\PlayerInventory.cs", "C#", 0, 0, 54, 0, 0, 0, 7, 61
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Concrete\Model\Items\DefaultItemData.cs", "C#", 0, 0, 6, 0, 0, 0, 3, 9
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Concrete\Model\Items\SeedItemData.cs", "C#", 0, 0, 35, 0, 0, 0, 7, 42
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\Concrete\Model\Items\ToolItemData.cs", "C#", 0, 0, 106, 0, 0, 6, 12, 124
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\IUsable.cs", "C#", 0, 0, 8, 0, 0, 0, 2, 10
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\InventoryAndItems\InventoryTester.cs", "C#", 0, 0, 48, 0, 0, 0, 10, 58
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\Pets\Dog\Dog.cs", "C#", 0, 0, 58, 0, 0, 0, 13, 71
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\Player\CameraRotation.cs", "C#", 0, 0, 42, 0, 0, 22, 8, 72
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\Player\EntityAnimator.cs", "C#", 0, 0, 48, 0, 0, 0, 8, 56
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\Player\PlayerController.cs", "C#", 0, 0, 108, 0, 0, 11, 21, 140
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\Time\Calendar.cs", "C#", 0, 0, 92, 0, 0, 0, 13, 105
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\Time\CalendarFeastData.cs", "C#", 0, 0, 12, 0, 0, 0, 3, 15
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\Time\CalendarPanel.cs", "C#", 0, 0, 48, 0, 0, 0, 9, 57
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\Time\DayNightController.cs", "C#", 0, 0, 43, 0, 0, 2, 8, 53
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\Time\LightController.cs", "C#", 0, 0, 76, 0, 0, 0, 10, 86
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\Time\TimeDisplay.cs", "C#", 0, 0, 23, 0, 0, 0, 5, 28
+"s:\Unity\Projects\FarmGamePrototype\Assets\App\Scripts\Time\TimeManager.cs", "C#", 0, 0, 203, 0, 0, 0, 25, 228
+"s:\Unity\Projects\FarmGamePrototype\Assets\Resources\PerformanceTestRunInfo.json", "JSON", 1, 0, 0, 0, 0, 0, 0, 1
+"s:\Unity\Projects\FarmGamePrototype\Assets\Resources\PerformanceTestRunSettings.json", "JSON", 1, 0, 0, 0, 0, 0, 0, 1
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl", "UnityShader", 0, 0, 0, 130, 0, 18, 31, 179
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader", "UnityShader", 0, 0, 0, 113, 0, 2, 31, 146
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader", "UnityShader", 0, 0, 0, 123, 0, 3, 30, 156
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader", "UnityShader", 0, 0, 0, 113, 0, 2, 31, 146
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader", "UnityShader", 0, 0, 0, 253, 0, 4, 70, 327
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader", "UnityShader", 0, 0, 0, 253, 0, 4, 65, 322
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader", "UnityShader", 0, 0, 0, 198, 0, 10, 51, 259
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader", "UnityShader", 0, 0, 0, 193, 0, 8, 52, 253
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader", "UnityShader", 0, 0, 0, 82, 0, 4, 21, 107
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader", "UnityShader", 0, 0, 0, 290, 0, 15, 85, 390
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader", "UnityShader", 0, 0, 0, 192, 0, 8, 51, 251
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader", "UnityShader", 0, 0, 0, 104, 0, 8, 28, 140
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader", "UnityShader", 0, 0, 0, 123, 0, 4, 33, 160
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMP_SDF.shader", "UnityShader", 0, 0, 0, 253, 0, 4, 70, 327
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMP_Sprite.shader", "UnityShader", 0, 0, 0, 111, 0, 0, 21, 132
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMPro.cginc", "UnityShader", 0, 0, 0, 63, 0, 2, 20, 85
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc", "UnityShader", 0, 0, 0, 129, 0, 2, 35, 166
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc", "UnityShader", 0, 0, 0, 62, 0, 6, 13, 81
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc", "UnityShader", 0, 0, 0, 75, 0, 7, 18, 100
+"s:\Unity\Projects\FarmGamePrototype\Assets\TextMesh Pro\Sprites\EmojiOne.json", "JSON", 155, 0, 0, 0, 0, 0, 2, 157
+"s:\Unity\Projects\FarmGamePrototype\ComputeCommandBuffer.cs", "C#", 0, 0, 175, 0, 0, 637, 167, 979
+"s:\Unity\Projects\FarmGamePrototype\IBaseCommandBuffer.cs", "C#", 0, 0, 85, 0, 0, 229, 78, 392
+"s:\Unity\Projects\FarmGamePrototype\IComputeCommandBuffer.cs", "C#", 0, 0, 103, 0, 0, 427, 94, 624
+"s:\Unity\Projects\FarmGamePrototype\ILowLevelCommandBuffer.cs", "C#", 0, 0, 75, 0, 0, 360, 67, 502
+"s:\Unity\Projects\FarmGamePrototype\IRasterCommandBuffer.cs", "C#", 0, 0, 61, 0, 0, 304, 52, 417
+"s:\Unity\Projects\FarmGamePrototype\LowLevelCommandBuffer.cs", "C#", 0, 0, 147, 0, 0, 570, 140, 857
+"s:\Unity\Projects\FarmGamePrototype\Packages\manifest.json", "JSON", 48, 0, 0, 0, 0, 0, 1, 49
+"s:\Unity\Projects\FarmGamePrototype\Packages\packages-lock.json", "JSON", 473, 0, 0, 0, 0, 0, 1, 474
+"s:\Unity\Projects\FarmGamePrototype\README.md", "Markdown", 0, 1, 0, 0, 0, 0, 0, 1
+"s:\Unity\Projects\FarmGamePrototype\RasterCommandBuffer.cs", "C#", 0, 0, 133, 0, 0, 514, 125, 772
+"Total", "-", 678, 1, 6321, 3050, 68, 3370, 2388, 15876

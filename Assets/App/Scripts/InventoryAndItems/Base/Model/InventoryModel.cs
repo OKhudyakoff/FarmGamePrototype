@@ -17,6 +17,7 @@ namespace InventorySystem.Model
 
         public int AddItem(ItemData item, int count = 1)
         {
+            if(item == null) return 0;
             // Fill slots with same item
             foreach (InventorySlot slot in Slots)
             {

@@ -103,7 +103,15 @@ public class ToolItemData : ItemData, IUsable
 
     public string GetAnimationName()
     {
-        return "PickUp";
+        switch (Type)
+        {
+            case ToolType.Hoe:
+                return "Digging";
+            case ToolType.WateringCan:
+                return "Watering";
+            default:
+                return "PickUp";
+        }
     }
 
     public enum ToolType

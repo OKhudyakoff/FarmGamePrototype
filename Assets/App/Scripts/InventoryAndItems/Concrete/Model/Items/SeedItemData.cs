@@ -34,8 +34,8 @@ namespace InventorySystem
             {
                 land.Plant(_plantData);
                 slot.DecreaseQuantity(1);
+                GameDebugger.ShowInfo($"{ItemName} успешно посажены.");
             }
-            onUseComplete();
         }
     }
 }

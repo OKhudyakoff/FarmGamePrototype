@@ -48,7 +48,7 @@ public class PlantedPlantController : MonoBehaviour
         {
             _minutesPassed += _timeManager.MinutesPerTick;
 
-            if (GrowthProgress >= (1f / _plantPrefabs.Count) * (_currentStage + 1))
+            if (GrowthProgress >= (1f / _plantPrefabs.Count) * (_currentStage + 1) && _currentStage+1 < _plantPrefabs.Count)
             {
                 _plantPrefabs[_currentStage].SetActive(false);
                 _currentStage++;
@@ -59,7 +59,7 @@ public class PlantedPlantController : MonoBehaviour
 
     private void UpdateAliveState(DateTime date)
     {
-        if (_alivePlant == null && IsAlivePlantCanSpawn(date))
+        if (_alivePlant == null && IsAlivePlantCanSpawn(date) && _plantData != null && _plantData.AlivePlantPrefab != null)
         {
             _isAlive = true;
             HidePlant();
