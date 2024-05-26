@@ -9,9 +9,9 @@ public class InteractionList : MonoBehaviour, IInteraction
 {
     [SerializeField] private BaseWindow _interactionPanel;
     [SerializeField] private Transform _buttonHolderl;
-    [SerializeField] private InterationUIButton _interactionButtonPrefab;
+    [SerializeField] private InteractionButtonUI _interactionButtonPrefab;
     [SerializeField] private List<ActionObject> _actions = new List<ActionObject>();
-    private List<InterationUIButton> _buttonList = new List<InterationUIButton>();
+    private List<InteractionButtonUI> _buttonList = new List<InteractionButtonUI>();
     private Outline _outline;
     private bool _isInteractionStarted = false;
 
@@ -28,7 +28,7 @@ public class InteractionList : MonoBehaviour, IInteraction
         {
             for (int i = 0; i < _actions.Count; i++)
             {
-                InterationUIButton newButton = Instantiate(_interactionButtonPrefab, _buttonHolderl);
+                InteractionButtonUI newButton = Instantiate(_interactionButtonPrefab, _buttonHolderl);
                 int id = i;
                 newButton.InteractionButton?.onClick.AddListener(() => UseAction(id));
                 newButton.InteractionText.text = (i+1).ToString() + "." + _actions[i]._eventName;

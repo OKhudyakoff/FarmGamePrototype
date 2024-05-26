@@ -1,0 +1,18 @@
+{
+    "name": "CraftSystem",
+    "rootNamespace": "",
+    "references": [
+        "GUID:1dc21458723c11242a22ac377e8c1eee",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:1fe967f2176d80b4ab225e93c5a169a6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

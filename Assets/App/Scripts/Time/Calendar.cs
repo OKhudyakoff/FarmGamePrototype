@@ -47,8 +47,8 @@ public class Calendar : MonoBehaviour
     private void SwitchSeason(int value)
     {
         _season += value;
-        if (_season < Season.Весна) _season = Season.Зима;
-        else if (_season > Season.Зима) _season = Season.Весна;
+        if (_season < Season.Р—РёРјР°) _season = Season.РћСЃРµРЅСЊ;
+        else if (_season > Season.РћСЃРµРЅСЊ) _season = Season.Р—РёРјР°;
         UpdateFeastData();
         FillThePanels();
     }
@@ -94,11 +94,11 @@ public class Calendar : MonoBehaviour
 
     public void OnPointerEnter(CalendarFeastData data)
     {
-        ServiceLocator.Current.Get<ToolTip>().Show(data.FeastName);
+        ServiceLocator.Current.Get<ToolTipController>().Show(data.FeastName);
     }
 
     public void OnPointerExit()
     {
-        ServiceLocator.Current.Get<ToolTip>().Hide();
+        ServiceLocator.Current.Get<ToolTipController>().Hide();
     }
 }

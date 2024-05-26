@@ -1,7 +1,7 @@
 using InteractionSystem;
 using UnityEngine;
 
-public class PlayerInteractor : Interactor, IService
+public class PlayerInteractor : Interactor
 {
     [SerializeField] private Transform _interactionPoint;
     [SerializeField] private LayerMask _interactionMask;
